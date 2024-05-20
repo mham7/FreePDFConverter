@@ -8,4 +8,9 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.DataGridExcelExport.Wpf" Version="25.2.4" />
+    <PackageReference Include="Syncfusion.PdfViewer.WPF" Version="25.2.4" />
+  </ItemGroup>
+
 </Project>

@@ -16,16 +16,13 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="0" Text="Login" Margin="5"/>
+        <TextBlock Grid.Row="1" Text="Email:" Margin="5" Width="200"/>
+        <TextBox Grid.Row="2" Name="EmailTextBox" Margin="5" Width="200"/>
+        <TextBlock Grid.Row="3" Text="Password:" Margin="5" Width="200"/>
+        <PasswordBox Grid.Row="4" Name="PasswordBox" Margin="5" Width="200"/>
+        <Button Grid.Row="5" Content="Login" Margin="300,20,271,276" Height="30" />
 
-        <TextBlock Grid.Row="1" Text="Email:" Margin="5"/>
-        <TextBox Grid.Row="2" Name="EmailTextBox" Margin="5"/>
 
-        <TextBlock Grid.Row="3" Text="Password:" Margin="5"/>
-        <PasswordBox Grid.Row="4" Name="PasswordBox" Margin="5"/>
 
-        <Button Grid.Row="3" Content="Login"  Margin="6"/>
-
-        <TextBlock Grid.Row="4" Name="LoginResultText" Margin="5"/>
     </Grid>
 </Window>
