@@ -24,8 +24,10 @@
          Convert Docs into PDFs for free
         </TextBlock>
 
-        <Button Content="Select Folder" HorizontalAlignment="Left" FontSize="16" FontFamily="Verdana" Foreground="White" Background="OrangeRed" Margin="71,235,0,0" Grid.Row="5" VerticalAlignment="Top"  Height="50" Width="157" Click="SelectFolder"/>
-        <Button Content="Convert" HorizontalAlignment="Right" FontSize="16" FontFamily="Verdana" Foreground="White" Background="OrangeRed" Margin="71,235,20,0" Grid.Row="5" VerticalAlignment="Top"  Height="50" Width="157"/>
+        <Button Content="Select Folder" HorizontalAlignment="Left" FontSize="16" FontFamily="Verdana" Foreground="White" Background="OrangeRed" Margin="71,235,0,0" 
+                Grid.Row="5" VerticalAlignment="Top"  Height="50" Width="157" Click="SelectFolder"/>
+        <Button Content="Convert" HorizontalAlignment="Right" FontSize="16" FontFamily="Verdana" Foreground="White"
+                Background="OrangeRed" Margin="71,235,20,0" Grid.Row="5" VerticalAlignment="Top"  Height="50" Width="157" Click="ConvertButton"/>
 
 
 
