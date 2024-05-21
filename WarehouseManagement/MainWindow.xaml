@@ -1,11 +1,13 @@
-﻿<Window x:Class="WarehouseManagement.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagement"
+        xmlns:Syncfusion="http://schemas.syncfusion.com/wpf" x:Class="WarehouseManagement.MainWindow"
         mc:Ignorable="d"
-        Title="Login" Height="450" Width="800">
+        Icon="C:\Users\aliinham\source\repos\WarehouseManagement\WarehouseManagement\Images\emoji.png"
+        Title="Smile Converter" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -16,11 +18,17 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Row="1" Text="Email:" Margin="5" Width="200"/>
-        <TextBox Grid.Row="2" Name="EmailTextBox" Margin="5" Width="200"/>
-        <TextBlock Grid.Row="3" Text="Password:" Margin="5" Width="200"/>
-        <PasswordBox Grid.Row="4" Name="PasswordBox" Margin="5" Width="200"/>
-        <Button Grid.Row="5" Content="Login" Margin="300,20,271,276" Height="30" />
+
+        <Image Source="C:\Users\aliinham\source\repos\WarehouseManagement\WarehouseManagement\Images\convert.png" VerticalAlignment="Top" HorizontalAlignment="Left" Height="68" Width="67" Margin="350,137,0,0" Grid.Row="5" ></Image>
+        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Height="21" Width="256" Margin="0,217,0,0" Grid.Row="5" FontFamily="Verdana" FontSize="16">
+         Convert Docs into PDFs for free
+        </TextBlock>
+
+        <Button Content="Select Folder" HorizontalAlignment="Left" FontSize="16" FontFamily="Verdana" Foreground="White" Background="OrangeRed" Margin="71,235,0,0" Grid.Row="5" VerticalAlignment="Top"  Height="50" Width="157" Click="SelectFolder"/>
+        <Button Content="Convert" HorizontalAlignment="Right" FontSize="16" FontFamily="Verdana" Foreground="White" Background="OrangeRed" Margin="71,235,20,0" Grid.Row="5" VerticalAlignment="Top"  Height="50" Width="157"/>
+
+
+
 
 
 
