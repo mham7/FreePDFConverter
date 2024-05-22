@@ -7,7 +7,7 @@
         xmlns:Syncfusion="http://schemas.syncfusion.com/wpf" x:Class="WarehouseManagement.MainWindow"
         mc:Ignorable="d"
         Icon="C:\Users\aliinham\source\repos\WarehouseManagement\WarehouseManagement\Images\emoji.png"
-        Title="Smile Converter" Height="450" Width="800">
+        Title="Smile Converter" Height="450" Width="800" MinWidth="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -18,21 +18,23 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
+        <Image Source="C:\Users\aliinham\source\repos\WarehouseManagement\WarehouseManagement\Images\convert.png" 
+           VerticalAlignment="Top" HorizontalAlignment="Center" 
+           Height="68" Width="67" Margin="0,20,0,0" Grid.Row="0" ></Image>
 
-        <Image Source="C:\Users\aliinham\source\repos\WarehouseManagement\WarehouseManagement\Images\convert.png" VerticalAlignment="Top" HorizontalAlignment="Left" Height="68" Width="67" Margin="350,137,0,0" Grid.Row="5" ></Image>
-        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" Height="21" Width="256" Margin="0,217,0,0" Grid.Row="5" FontFamily="Verdana" FontSize="16">
-         Convert Docs into PDFs for free
-        </TextBlock>
+        <TextBlock Text="Convert Docs into PDFs for free" 
+               VerticalAlignment="Top" HorizontalAlignment="Center" 
+               FontFamily="Verdana" FontSize="16" Margin="0,10,0,0" Grid.Row="1"/>
 
-        <Button Content="Select Folder" HorizontalAlignment="Left" FontSize="16" FontFamily="Verdana" Foreground="White" Background="OrangeRed" Margin="71,235,0,0" 
-                Grid.Row="5" VerticalAlignment="Top"  Height="50" Width="157" Click="SelectFolder"/>
-        <Button Content="Convert" HorizontalAlignment="Right" FontSize="16" FontFamily="Verdana" Foreground="White"
-                Background="OrangeRed" Margin="71,235,20,0" Grid.Row="5" VerticalAlignment="Top"  Height="50" Width="157" Click="ConvertButton"/>
+        <Button Content="Select Folder" 
+            FontSize="16" FontFamily="Verdana" Foreground="White" Background="OrangeRed" 
+            Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center"
+            Height="50" Width="200" Margin="0,20,0,0" Click="SelectFolder"/>
 
-
-
-
-
-
+        <Button Content="Convert" 
+            FontSize="16" FontFamily="Verdana" Foreground="White" Background="OrangeRed" 
+            Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Center"
+            Height="50" Width="200" Margin="0,20,0,0" Click="ConvertButton"/>
     </Grid>
+
 </Window>

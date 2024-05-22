@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Aspose.Words" Version="24.5.0" />
     <PackageReference Include="CustomSelectFileDlg" Version="1.0.0" />
     <PackageReference Include="Syncfusion.DataGridExcelExport.Wpf" Version="25.2.4" />
     <PackageReference Include="Syncfusion.DocToPDFConverter.Wpf" Version="25.2.5" />

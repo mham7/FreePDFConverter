@@ -1,40 +1,13 @@
-﻿using System.Text;
+﻿using System.IO;
+using System.Reflection.Metadata;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Aspose.Words;
 using Microsoft.Win32;
 
-//to work with word documents
-using Syncfusion.DocIO;
-using Syncfusion.DocIO.DLS;
-using Syncfusion.DocToPDFConverter;
-
-//to read convert and work with PDF files
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
-using Syncfusion.Pdf.Parsing;
-
-//for our theme
-using Syncfusion.SfSkinManager;
-using Syncfusion.Themes.FluentLight.WPF;
-
-//to start a proccess we need the diagnostics namespace
-using System.Diagnostics;
-
-//to work with images
-using System.Drawing;
-
-//to save and read files
-using System.IO;
-using System.Windows;
-using Microsoft.VisualBasic;
-using System.Reflection.Metadata;
 
 namespace WarehouseManagement
 {
@@ -43,6 +16,7 @@ namespace WarehouseManagement
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string selectedFilePath;
         public MainWindow()
         {
             InitializeComponent();
@@ -51,7 +25,7 @@ namespace WarehouseManagement
 
 
 
-        private string selectedFilePath;
+      
 
         private void SelectFolder(object sender, RoutedEventArgs e)
         {
@@ -75,7 +49,30 @@ namespace WarehouseManagement
                 return;
             }
 
-        
+            // Load the Word document
+            Aspose.Words.Document doc = new Aspose.Words.Document(selectedFilePath);
+
+            try
+            {
+                // Open a SaveFileDialog to allow the user to select the location and name of the converted PDF file
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "PDF Files (*.pdf)|*.pdf";
+                if (saveFileDialog.ShowDialog() == true)
+                {
+                    // Get the selected file path
+                    string outputFilePath = saveFileDialog.FileName;
+
+                    // Save the document to PDF format
+                    doc.Save(outputFilePath, SaveFormat.Pdf);
+
+                    MessageBox.Show("Document converted and saved successfully.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error converting document: {ex.Message}");
+            }
         }
+
     }
 }
